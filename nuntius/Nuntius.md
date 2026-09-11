@@ -105,7 +105,7 @@ Optional source keys include `NEWS_API_KEY`, `OPENWEATHER_API_KEY`, `YOUTUBE_API
 
 <br>
 
-Use `nuntius/config.yaml` for review focus, temperature, token limits, authoring settings, and the default Gemini model. The default model is `gemini-3.7-flash` (fallback `gemini-3.6-flash` via `complex_model`). Override with `NUNTIUS_GEMINI_MODEL` (and `NUNTIUS_GEMINI_FALLBACK_MODEL`). Only the Flash family is Free-Tier verified: `gemini-3.5-flash-lite`/`3.1-flash-lite` for lightweight workloads, and `3.5-flash`/`3-flash-preview` if needed. Pro is retired until billing is enabled.
+  Use `nuntius/config.yaml` for review focus, temperature, token limits, authoring settings, and the default Gemini model. The default model is `gemini-3.8-flash` (fallback `gemini-3.7-flash` via `complex_model`). Override with `NUNTIUS_GEMINI_MODEL` (and `NUNTIUS_GEMINI_FALLBACK_MODEL`). Only the Flash family is Free-Tier verified: `gemini-3.5-flash-lite`/`3.1-flash-lite` for lightweight workloads, and `3.5-flash`/`3-flash-preview` if needed. Pro is retired until billing is enabled.
 
 <br>
 

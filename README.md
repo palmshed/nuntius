@@ -92,6 +92,7 @@ puts fast_client.generate_text('Explain Ruby in one sentence')
 | Key | ID |
 | --- | --- |
 | `:flash_latest` | `gemini-flash-latest` |
+| `:flash_3_8` | `gemini-3.8-flash` |
 | `:flash_3_7` | `gemini-3.7-flash` |
 | `:flash_3_6` | `gemini-3.6-flash` |
 | `:flash_3_5` | `gemini-3.5-flash` |
@@ -103,7 +104,7 @@ puts fast_client.generate_text('Explain Ruby in one sentence')
 
 <br>
 
-Short aliases: `:flash` uses `gemini-3.7-flash` (default), `:flash_fallback` uses `gemini-3.6-flash`, and `:flash_lite` uses `gemini-3.1-flash-lite`. Legacy `:pro_2_0` maps to `gemini-2.0-flash`. Pro models (`gemini-pro-latest`, `gemini-3.1-pro-preview`, `gemini-2.5-pro`) are retired for Free-Tier, as they resolve to the `3.1-pro` backend and hit quota `0`. Use billing to enable.
+Short aliases: `:flash` uses `gemini-3.8-flash` (default), `:flash_fallback` uses `gemini-3.7-flash`, and `:flash_lite` uses `gemini-3.1-flash-lite`. Legacy `:pro_2_0` maps to `gemini-2.0-flash`. Pro models (`gemini-pro-latest`, `gemini-3.1-pro-preview`, `gemini-2.5-pro`) are retired for Free-Tier, as they resolve to the `3.1-pro` backend and hit quota `0`. Use billing to enable.
 
 <br>
 
@@ -226,7 +227,7 @@ gem build nuntius-rb.gemspec
 
 <br>
 
-Nuntius Review is the PR review app in this repo. It defaults to `gemini-3.7-flash` (fallback `gemini-3.6-flash` for large diffs). Override with `NUNTIUS_GEMINI_MODEL`. Retrieval context is off unless enabled in `nuntius/config.yaml`. Only verified `generateContent` Flash models are listed as supported. See API `GET /v1beta/models` for existence, not quota.
+Nuntius Review is the PR review app in this repo. It defaults to `gemini-3.8-flash` (fallback `gemini-3.7-flash` for large diffs). Override with `NUNTIUS_GEMINI_MODEL`. Retrieval context is off unless enabled in `nuntius/config.yaml`. Only verified `generateContent` Flash models are listed as supported. See API `GET /v1beta/models` for existence, not quota.
 
 <br>
 

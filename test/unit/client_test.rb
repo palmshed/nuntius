@@ -110,7 +110,7 @@ class TestClient < Minitest::Test
 
   def test_initialization_with_api_key
     assert_equal @api_key, @client.instance_variable_get(:@api_key)
-    assert_equal 'gemini-3.7-flash', @client.instance_variable_get(:@model)
+    assert_equal 'gemini-3.8-flash', @client.instance_variable_get(:@model)
   end
 
   def test_initialization_does_not_print_api_key_to_stdout
@@ -234,7 +234,7 @@ class TestClient < Minitest::Test
   def test_initialization_with_different_model
     client = Nuntius::Client.new(@api_key, model: :flash)
 
-    assert_equal 'gemini-3.7-flash', client.instance_variable_get(:@model)
+    assert_equal 'gemini-3.8-flash', client.instance_variable_get(:@model)
   end
 
   def setup_invalid_api_key_tests
