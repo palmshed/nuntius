@@ -141,7 +141,7 @@ module Minitest
     end
 
     # Helper method to stub API requests
-    def stub_gemini_request(model: 'gemini-3.7-flash', response: test_response, status: 200, with_body: nil)
+    def stub_gemini_request(model: 'gemini-3.8-flash', response: test_response, status: 200, with_body: nil)
       url = build_gemini_url(model)
       expected_body = normalize_expected_body(with_body)
 

@@ -9,9 +9,9 @@ Nuntius maps Ruby symbols to Gemini `generateContent` text model IDs.
 | Symbol | Model | Use |
 | --- | --- | --- |
 | `:flash_latest` | `gemini-flash-latest` | Moving Flash alias |
-| `:flash_3_7` | `gemini-3.7-flash` | Gemini 3.7 Flash, default |
-| `:flash_3_7` | `gemini-3.7-flash` | Gemini 3.7 Flash, default |
-| `:flash_3_6` | `gemini-3.6-flash` | Gemini 3.6 Flash, fallback |
+| `:flash_3_8` | `gemini-3.8-flash` | Gemini 3.8 Flash, default |
+| `:flash_3_7` | `gemini-3.7-flash` | Gemini 3.7 Flash, fallback |
+| `:flash_3_6` | `gemini-3.6-flash` | Gemini 3.6 Flash |
 | `:flash_3_5` | `gemini-3.5-flash` | Gemini 3.5 Flash, stable baseline |
 | `:flash_3_5_lite` | `gemini-3.5-flash-lite` | Gemini 3.5 Flash-Lite |
 | `:flash_3_preview` | `gemini-3-flash-preview` | Gemini 3 Flash preview |
@@ -20,8 +20,8 @@ Nuntius maps Ruby symbols to Gemini `generateContent` text model IDs.
 | `:pro_2_5` | `gemini-2.5-pro` | Gemini 2.5 Pro |
 | `:flash_2_5` | `gemini-2.5-flash` | Gemini 2.5 Flash |
 | `:flash_2_0` | `gemini-2.0-flash` | Gemini 2.0 Flash |
-| `:flash` | `gemini-3.7-flash` | Short alias, default |
-| `:flash_fallback` | `gemini-3.6-flash` | Short alias, fallback |
+| `:flash` | `gemini-3.8-flash` | Short alias, default |
+| `:flash_fallback` | `gemini-3.7-flash` | Short alias, fallback |
 | `:flash` | `gemini-3.5-flash` | Short alias |
 | `:flash_lite` | `gemini-3.1-flash-lite` | Short alias, lightweight |
 | `:pro_2_0` | `gemini-2.0-flash` | Legacy alias |
@@ -41,7 +41,7 @@ fast_client = Nuntius::Client.new(model: :flash)
 
 <br>
 
-Unknown model symbols fall back to `:flash` (`gemini-3.7-flash`).
+Unknown model symbols fall back to `:flash` (`gemini-3.8-flash`).
 
 <br>
 

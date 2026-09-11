@@ -29,8 +29,8 @@ module Nuntius
       {}
     end.freeze
 
-    CANONICAL_DEFAULT = (CANONICAL['default'] || 'gemini-3.7-flash').freeze
-    CANONICAL_FALLBACK = (CANONICAL['fallback'] || 'gemini-3.6-flash').freeze
+    CANONICAL_DEFAULT = (CANONICAL['default'] || 'gemini-3.8-flash').freeze
+    CANONICAL_FALLBACK = (CANONICAL['fallback'] || 'gemini-3.7-flash').freeze
     CANONICAL_STABLE = (CANONICAL['stable_baseline'] || 'gemini-3.5-flash').freeze
     CANONICAL_LIGHTWEIGHT = (CANONICAL['lightweight'] || ['gemini-3.1-flash-lite', 'gemini-3.5-flash-lite']).freeze
     CANONICAL_LIGHT = CANONICAL_LIGHTWEIGHT.first || 'gemini-3.1-flash-lite'
@@ -39,8 +39,9 @@ module Nuntius
     # Values are derived from config/models.yaml. Do not hard-code elsewhere.
     MODELS = {
       flash_latest: 'gemini-flash-latest',
-      flash_3_7: CANONICAL_DEFAULT,
-      flash_3_6: CANONICAL_FALLBACK,
+      flash_3_8: CANONICAL_DEFAULT,
+      flash_3_7: CANONICAL_FALLBACK,
+      flash_3_6: 'gemini-3.6-flash',
       flash_3_5: CANONICAL_STABLE,
       flash_3_5_lite: CANONICAL_LIGHTWEIGHT[1] || 'gemini-3.5-flash-lite',
       flash_3_preview: 'gemini-3-flash-preview',
@@ -48,7 +49,7 @@ module Nuntius
       flash_2_5: 'gemini-2.5-flash',
       flash_2_0: 'gemini-2.0-flash',
 
-      # Short aliases: default Flash is 3.7, fallback 3.6.
+      # Short aliases: default Flash is 3.8, fallback 3.7.
       flash: CANONICAL_DEFAULT,
       flash_fallback: CANONICAL_FALLBACK,
       flash_lite: CANONICAL_LIGHT,
@@ -56,7 +57,7 @@ module Nuntius
     }.freeze
 
     # Deprecated/retired models: Pro family requires billing, not usable on Free-Tier.
-    # Kept for backward compat but warn and default to :flash (gemini-3.7-flash).
+    # Kept for backward compat but warn and default to :flash.
     DEPRECATED_MODELS = {
       pro_latest: 'gemini-pro-latest',
       pro: 'gemini-pro-latest',

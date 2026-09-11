@@ -15,19 +15,20 @@ class TestModels < Minitest::Test
     client = Nuntius::Client.new(@api_key, model: :pro)
 
     assert_instance_of Nuntius::Client, client
-    assert_equal 'gemini-3.7-flash', client.instance_variable_get(:@model)
+    assert_equal 'gemini-3.8-flash', client.instance_variable_get(:@model)
   end
 
   def test_default_flash_model
     client = Nuntius::Client.new(@api_key, model: :flash)
 
     assert_instance_of Nuntius::Client, client
-    assert_equal 'gemini-3.7-flash', client.instance_variable_get(:@model)
+    assert_equal 'gemini-3.8-flash', client.instance_variable_get(:@model)
   end
 
   def test_generate_content_text_models
     expected_models = {
       flash_latest: 'gemini-flash-latest',
+      flash_3_8: 'gemini-3.8-flash',
       flash_3_7: 'gemini-3.7-flash',
       flash_3_6: 'gemini-3.6-flash',
       flash_3_5: 'gemini-3.5-flash',
@@ -67,6 +68,6 @@ class TestModels < Minitest::Test
     client = Nuntius::Client.new(@api_key, model: :invalid_model)
 
     assert_instance_of Nuntius::Client, client
-    assert_equal 'gemini-3.7-flash', client.instance_variable_get(:@model)
+    assert_equal 'gemini-3.8-flash', client.instance_variable_get(:@model)
   end
 end

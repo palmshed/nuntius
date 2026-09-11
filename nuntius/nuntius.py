@@ -34,8 +34,8 @@ REVIEW_HISTORY_END = "<!-- nuntius-history-end -->"
 # Canonical model source: config/models.yaml (repository-wide single source)
 def _load_canonical_models():
     fallback = {
-        "default": "gemini-3.7-flash",
-        "fallback": "gemini-3.6-flash",
+        "default": "gemini-3.8-flash",
+        "fallback": "gemini-3.7-flash",
         "stable_baseline": "gemini-3.5-flash",
         "lightweight": ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"],
     }
@@ -62,8 +62,8 @@ def _load_canonical_models():
 
 
 _CANONICAL_MODELS = _load_canonical_models()
-DEFAULT_GEMINI_MODEL = os.getenv("NUNTIUS_GEMINI_MODEL", _CANONICAL_MODELS.get("default", "gemini-3.7-flash"))
-FALLBACK_GEMINI_MODEL = os.getenv("NUNTIUS_GEMINI_FALLBACK_MODEL", _CANONICAL_MODELS.get("fallback", "gemini-3.6-flash"))
+DEFAULT_GEMINI_MODEL = os.getenv("NUNTIUS_GEMINI_MODEL", _CANONICAL_MODELS.get("default", "gemini-3.8-flash"))
+FALLBACK_GEMINI_MODEL = os.getenv("NUNTIUS_GEMINI_FALLBACK_MODEL", _CANONICAL_MODELS.get("fallback", "gemini-3.7-flash"))
 
 
 def _apply_env_overrides(config):
