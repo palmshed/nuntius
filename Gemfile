@@ -14,6 +14,10 @@ group :development, :test do
   gem 'simplecov-lcov', '~> 0.9.0', require: false
 end
 
+# httparty 0.24.2 calls JSON.parse with quirks_mode, removed in json 3.x.
+# Pin to 2.x until httparty supports json 3. rubocop 1.90 allows >= 2.3.
+gem 'json', '~> 2.0'
+
 gem "mocha", "~> 3.0", groups: [:development, :test]
 gem "minitest-reporters", "1.8.0", :groups => [:development, :test]
 gem "webmock", "~> 3.26", :groups => [:test]
