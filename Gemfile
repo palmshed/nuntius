@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 # Additional dependencies (Ruby 3.4+ where bigdecimal is separate)
-gem 'bigdecimal', '~> 4.0'
+gem 'bigdecimal', '~> 4.1'
 
 # Development and test dependencies
 group :development, :test do
@@ -16,7 +16,7 @@ end
 
 # httparty 0.24.2 calls JSON.parse with quirks_mode, removed in json 3.x.
 # Pin to 2.x until httparty supports json 3. rubocop 1.90 allows >= 2.3.
-gem 'json', '~> 2.0'
+gem 'json', '~> 3.0'
 
 gem "mocha", "~> 3.0", groups: [:development, :test]
 gem "minitest-reporters", "1.8.0", :groups => [:development, :test]
