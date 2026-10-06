@@ -46,3 +46,6 @@ testing_documentation.html
 .vercel
 site/
 .env*
+
+# Agent working memory (local state)
+.codex/
