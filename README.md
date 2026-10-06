@@ -15,6 +15,12 @@
 
 Ruby client for Gemini `generateContent`. Includes a CLI and a PR review app.
 
+> [!NOTE]
+> Prior generations: [l2](https://github.com/coccinella-labs/l2) targets the stable `v1`
+> API with Gemini 2.x models, and [vesper](https://github.com/coccinella-labs/vesper)
+> targets `v1beta` with Gemini 3.x models. This repo targets `v1beta` with Gemini 3.6
+> and later.
+
 <br>
 
 # Installation
