@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1](https://github.com/palmshed/nuntius/compare/nuntius-rb/v1.0.0...nuntius-rb/v1.0.1) (2026-10-06)
+
+
+### Documentation
+
+* drop --pre from install command on website ([ef07591](https://github.com/palmshed/nuntius/commit/ef0759189c6678383e0ab21cbee4598293d8776a))
+* link prior generations l2 and vesper in [!NOTE] format ([4e7ffbd](https://github.com/palmshed/nuntius/commit/4e7ffbdc51762bc438ec91493f6d9aed968afbe9))
+
+## Changelog
+
 <br>
 
 All notable changes are tracked here.
@@ -7,7 +17,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) · Versioning: 
 
 <br>
 
-# [1.0.0]
+## [1.0.0]
 
 <br>
 
