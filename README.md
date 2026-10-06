@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/palmshed/nuntius/main/.github/assets/thumbnail.png" alt="nuntius" width="100%">
-</p>
-
 # Nuntius
 <img src="website/assets/nuntius-header.png" alt="Nuntius" width="100%">
 
