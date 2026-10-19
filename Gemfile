@@ -20,5 +20,5 @@ gem 'json', '~> 3.0'
 
 gem "mocha", "~> 3.0", groups: [:development, :test]
 gem "minitest-reporters", "1.8.0", :groups => [:development, :test]
-gem "webmock", "~> 3.26", :groups => [:test]
+gem "webmock", "~> 3.34", :groups => [:test]
 gem "thor", "~> 1.3", :groups => [:development]
