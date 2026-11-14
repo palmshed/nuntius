@@ -85,8 +85,11 @@ class TestNuntius(unittest.TestCase):
             patch.dict(os.environ, {"NUNTIUS_GEMINI_MODEL": "gemini-3.5-flash"}),
         ):
             config = load_config()
-            self.assertEqual(config["model"], "gemini-3.7-flash")
-            self.assertEqual(config["complex_model"], "gemini-3.6-flash")
+            # NUNTIUS_GEMINI_MODEL wins over both the checked-in value and the
+            # default; complex_model keeps the canonical fallback because no
+            # NUNTIUS_GEMINI_FALLBACK_MODEL is set here.
+            self.assertEqual(config["model"], "gemini-3.5-flash")
+            self.assertEqual(config["complex_model"], "gemini-3.7-flash")
 
     @patch("nuntius.nuntius.load_config")
     def test_analyze_with_gemini_success(self, mock_load_config):
